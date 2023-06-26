@@ -1,0 +1,12 @@
+{
+    "destinations" : [
+        {
+            "name" : "srv",
+            "url" : "http://localhost:4004/",
+            "forwardAuthToken" : true,
+            "setXForwardedHeaders" : true,
+            "timeout" : 60000
+        }
+    ]
+}
+  
