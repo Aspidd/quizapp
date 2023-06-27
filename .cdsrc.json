@@ -7,7 +7,7 @@
         "kind": "sqlite",
         "model": [
           "db/",
-          "srv/services"
+          "srv"
         ]
       }
     }
