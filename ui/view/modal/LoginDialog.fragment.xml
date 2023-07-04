@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f = "sap.ui.layout.form">
+    <Dialog title="Login" binding="{shopService>/Login(...)}">
+        <content>
+            <f:SimpleForm>
+                <Label text="E-mail"/>
+                <Input value="{login>/email}"/>
+                <Label text="Password"/>
+                <Input value="{login>/password}" />
+            </f:SimpleForm>
+        </content>
+        <buttons>
+            <Button text="Login" press="onLogin"/>
+            <Button text="Close" press="onDialogClose"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

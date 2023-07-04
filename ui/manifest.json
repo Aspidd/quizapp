@@ -1,0 +1,54 @@
+{
+  "_version": "1.0.0",
+  "sap.app": {
+    "id": "shop",
+    "type": "application",
+    "dataSources": {
+      "shopService": {
+        "uri": "/api/odata/v4/shop/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui5": {
+    "models": {
+      "shopService": {
+        "dataSource": "shopService",
+        "type": "sap.ui.model.odata.v4.ODataModel",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "groupId": "$auto"
+        }
+      }
+    },      
+    "rootView": {
+      "viewName": "shop.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "viewPath": "shop.view",
+        "async": true
+      },
+      "routes": [
+        {
+        "pattern": "",
+        "name": "home",
+        "viewType": "XML",
+        "view": "Home"
+      }]
+    }
+  }
+}

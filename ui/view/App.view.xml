@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="shop.controller.App"
+	displayBlock="true"
+	height="100%"
+	xmlns:m="sap.m"
+	xmlns="sap.tnt"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ToolPage sideExpanded="{config>/isSideExpanded}" >
+		<header>
+			<ToolHeader>
+				<m:Toolbar width="100%" style="Clear">
+					<m:Button icon="sap-icon://menu2" press="toggleSideNav(${config>/isSideExpanded})"/>
+					<m:Title text="Liza Shop"/>
+					<m:ToolbarSpacer/>
+					<m:Text text="Dark Theme"/>
+					<m:Switch customTextOn="On" customTextOff="Off" change="сhangeTheme"/>
+					<m:Button text="Login" press="onOpenLoginDialog"/>
+				</m:Toolbar>
+			</ToolHeader>
+		</header>
+		<sideContent>
+			<SideNavigation>
+				<item>
+					<NavigationList>
+						<NavigationListItem text="Home" icon="sap-icon://home"/>
+					</NavigationList>
+				</item>
+				<fixedItem>
+					<NavigationList>
+						<NavigationListItem text="Product Category" icon="sap-icon://activate"/>
+						<NavigationListItem text="Product" icon="sap-icon://add"/>
+						<NavigationListItem text="Users" icon="sap-icon://person-placeholder"/>
+					</NavigationList>
+				</fixedItem>
+			</SideNavigation>
+		</sideContent>
+		<mainContents>
+			<m:App id = "app"/>
+		</mainContents>
+		
+	</ToolPage>
+</mvc:View>
